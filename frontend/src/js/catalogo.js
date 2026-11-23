@@ -23,12 +23,28 @@ let carrito = cargarCarrito();
 // IMÁGENES LOCALES
 
 const imagenesProductos = {
+    // PRODUCTOS ANTERIORES
     1: "../img/laptop-asus.jpg",
     2: "../img/memoria-ram.jpg",
     3: "../img/ssd-1tb.jpg",
     4: "../img/teclado.jpg",
     5: "../img/mouse.jpg",
-    7: "../img/monitor.jpg"
+    7: "../img/monitor.jpg",
+
+    // NUEVAS LAPTOPS
+    9: "../img/lenovo-loq-15.jpg",
+    10: "../img/hp-pavilion-15.jpg",
+    11: "../img/acer-nitro-v15.jpg",
+
+    // NUEVO ALMACENAMIENTO
+    12: "../img/ssd-nvme-500gb.jpg",
+    13: "../img/ssd-nvme-2tb.jpg",
+    14: "../img/hdd-2tb.jpg",
+
+    // NUEVOS ACCESORIOS
+    15: "../img/logitech-g435.jpg",
+    16: "../img/hyperx-cloud-stinger-2.jpg",
+    17: "../img/logitech-g502.jpg"
 };
 
 // =====================================
@@ -439,10 +455,13 @@ document.getElementById("btnAgregarCarrito")
 
         guardarCarrito();
         mostrarCarrito();
+
+        const nombreProducto = productoSeleccionado.Nombre;
+
         cerrarDetalleProducto();
 
         mostrarMensaje(
-            `${productoSeleccionado?.Nombre || "Producto"} agregado al carrito.`,
+            `${nombreProducto} agregado al carrito.`,
             "success"
         );
 
@@ -629,7 +648,6 @@ function mostrarCarrito() {
     totalCarrito.textContent = `S/ ${total.toFixed(2)}`;
 
     contadorCarrito.textContent = cantidadTotal;
-
 }
 
 // =====================================

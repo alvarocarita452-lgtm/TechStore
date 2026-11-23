@@ -4,26 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore | Tecnología</title>
+    <title>TechStore | Tu tienda tecnológica</title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body class="min-h-screen bg-slate-50 text-slate-900">
 
-    <header class="bg-slate-950 px-6 py-5 text-white">
-        <h1 class="text-3xl font-extrabold">
-            Tech<span class="text-cyan-400">Store</span>
-        </h1>
+<body class="min-h-screen bg-slate-100 text-slate-900">
+
+    <!-- ENCABEZADO -->
+    <header class="bg-slate-950 text-white shadow-lg">
+        <div class="mx-auto max-w-7xl px-6 py-5 flex flex-wrap justify-between items-center gap-4">
+
+            <a href="./index.html" class="text-2xl font-extrabold">
+                Tech<span class="text-cyan-400">Store</span>
+            </a>
+
+            <nav class="flex flex-wrap items-center gap-5 text-sm">
+                <a href="./index.html" class="text-cyan-400">Inicio</a>
+                <a href="#categorias" class="text-slate-300 hover:text-cyan-400">Categorías</a>
+                <a href="./catalogo.html#productos" class="text-slate-300 hover:text-cyan-400">Catálogo</a>
+                <a href="./catalogo.html#carrito" class="text-slate-300 hover:text-cyan-400">Carrito</a>
+                <a href="#contacto" class="text-slate-300 hover:text-cyan-400">Contacto</a>
+            </nav>
+
+        </div>
     </header>
 
-    <main class="mx-auto max-w-7xl px-6 py-16">
-        <h2 class="text-4xl font-bold">
-            Bienvenido a TechStore
-        </h2>
+    <!-- BANNER PRINCIPAL -->
+    <section class="bg-linear-to-r from-slate-950 via-slate-900 to-cyan-950 text-white">
+        <div class="mx-auto max-w-7xl px-6 py-20">
 
-        <p class="mt-4 text-lg text-slate-600">
-            Tu espacio de tecnología y computación.
-        </p>
+            <div class="max-w-2xl">
+                <span class="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+                    Tecnología para todos
+                </span>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold mt-4 leading-tight">
+                    Encuentra tu próxima
+                    <span class="text-cyan-400">
+                        experiencia tecnológica.
+                    </span>
+                </h1>
+
+                <p class="text-slate-300 mt-6 text-lg">
+                    Descubre nuestros productos tecnológicos, componentes
+                    y accesorios para llevar tu equipo al siguiente nivel.
+                </p>
+
+                <a href="./catalogo.html#productos"
+                   class="inline-block mt-8 bg-cyan-500 hover:bg-cyan-600 text-white font-bold px-7 py-3 rounded-lg">
+                    Explorar catálogo
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="mx-auto max-w-7xl px-6 py-12">
+
+        <!-- CATEGORÍAS -->
+        <section id="categorias" class="mb-16">
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-extrabold">Nuestras categorías</h2>
+                <p class="text-slate-500 mt-2">
+                    Encuentra lo que necesitas para tu equipo.
+                </p>
+            </div>
+
+            <p id="mensajeCategorias" class="text-sm text-slate-500 mb-5">
+                Cargando categorías...
+            </p>
+
+            <div id="contenedorCategorias"
+                 class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            </div>
+
+        </section>
+
+        <!-- PRODUCTOS DESTACADOS -->
+        <section id="destacados">
+
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+                <div>
+                    <h2 class="text-3xl font-extrabold">Productos destacados</h2>
+                    <p class="text-slate-500 mt-2">
+                        Conoce algunos de nuestros productos disponibles.
+                    </p>
+                </div>
+
+                <a href="./catalogo.html#productos"
+                   class="bg-slate-950 hover:bg-cyan-600 text-white font-semibold px-5 py-3 rounded-lg">
+                    Ver todo el catálogo
+                </a>
+            </div>
+
+            <p id="mensajeProductos" class="text-sm text-slate-500 mb-5">
+                Cargando productos...
+            </p>
+
+            <div id="contenedorDestacados"
+                 class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            </div>
+
+        </section>
+
     </main>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="bg-white border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-6 py-12">
+
+            <h2 class="text-2xl font-bold">¿Necesitas ayuda?</h2>
+
+            <p class="text-slate-500 mt-2">
+                Estamos para ayudarte con tus consultas sobre nuestros productos.
+            </p>
+
+            <p class="mt-5 font-semibold">
+                Correo electrónico:
+                <span class="text-cyan-600">contacto@techstore.com</span>
+            </p>
+
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-slate-950 text-slate-400 text-center px-6 py-6">
+        <p>© 2026 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/inicio.js"></script>
 
 </body>
 </html>
