@@ -233,11 +233,3 @@ en el documento de evidencias.
 -   Adjuntar el documento de evidencias de Postman junto con el proyecto
     y el script SQL, según las indicaciones del docente.
 
-## Autoría
-
-**Proyecto:** TechStore\
-**Curso:** \[Completar nombre del curso\]\
-**NRC:** \[Completar NRC\]\
-**Estudiante:** \[Completar nombre del estudiante\]\
-**Docente:** \[Completar nombre del docente\]\
-**Periodo:** \[Completar periodo académico\]
