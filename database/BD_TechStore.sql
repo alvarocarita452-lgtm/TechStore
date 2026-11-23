@@ -257,3 +257,56 @@ GO
 EXEC sp_ConsultarPedidos @IdCliente = 1;
 GO
 
+USE BD_TechStore;
+GO
+
+SELECT 
+    IdCategoria,
+    Nombre
+FROM Categoria
+ORDER BY IdCategoria;
+
+
+INSERT INTO Producto
+    (Nombre, Descripcion, Precio, Stock, IdCategoria, Estado)
+VALUES
+-- LAPTOPS
+('Lenovo LOQ 15', 'Laptop gamer Lenovo LOQ 15', 3299.00, 10, 1, 1),
+('HP Pavilion 15', 'Laptop HP Pavilion para trabajo y estudio', 2799.00, 12, 1, 1),
+('Acer Nitro V 15', 'Laptop gamer Acer Nitro V 15', 3499.00, 8, 1, 1),
+
+-- ALMACENAMIENTO
+('SSD NVMe 500GB', 'Unidad de almacenamiento SSD NVMe 500GB', 220.00, 20, 3, 1),
+('SSD NVMe 2TB', 'Unidad de almacenamiento SSD NVMe 2TB', 490.00, 15, 3, 1),
+('HDD 2TB', 'Disco duro interno de 2TB', 310.00, 18, 3, 1),
+
+-- ACCESORIOS
+('Audifonos Logitech G435', 'Audifonos inalambricos Logitech G435', 280.00, 10, 4, 1),
+('Audifonos HyperX Cloud Stinger 2', 'Audifonos gamer HyperX Cloud Stinger 2', 190.00, 12, 4, 1),
+('Mouse Logitech G502', 'Mouse gamer Logitech G502', 210.00, 15, 4, 1);
+GO
+
+-- VERIFICAR LOS NUEVOS PRODUCTOS
+SELECT
+    P.IdProducto,
+    P.Nombre,
+    P.Precio,
+    P.Stock,
+    C.Nombre AS Categoria,
+    P.Estado
+FROM Producto P
+INNER JOIN Categoria C
+    ON P.IdCategoria = C.IdCategoria
+WHERE P.Nombre IN (
+    'Lenovo LOQ 15',
+    'HP Pavilion 15',
+    'Acer Nitro V 15',
+    'SSD NVMe 500GB',
+    'SSD NVMe 2TB',
+    'HDD 2TB',
+    'Audifonos Logitech G435',
+    'Audifonos HyperX Cloud Stinger 2',
+    'Mouse Logitech G502'
+)
+ORDER BY P.IdProducto;
+GO
