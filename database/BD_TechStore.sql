@@ -44,6 +44,7 @@ CREATE TABLE Producto (
     Precio DECIMAL(10,2) NOT NULL,
     Stock INT NOT NULL,
     IdCategoria INT NOT NULL,
+    Estado BIT NOT NULL DEFAULT 1,
 
     CONSTRAINT FK_Producto_Categoria
         FOREIGN KEY (IdCategoria)
@@ -256,23 +257,3 @@ GO
 EXEC sp_ConsultarPedidos @IdCliente = 1;
 GO
 
-
-CREATE TABLE Producto (
-    IdProducto INT IDENTITY(1,1) PRIMARY KEY,
-    Nombre VARCHAR(100) NOT NULL,
-    Descripcion VARCHAR(200),
-    Precio DECIMAL(10,2) NOT NULL,
-    Stock INT NOT NULL,
-    IdCategoria INT NOT NULL,
-    Estado BIT NOT NULL DEFAULT 1,
-
-    CONSTRAINT FK_Producto_Categoria
-        FOREIGN KEY (IdCategoria)
-        REFERENCES Categoria(IdCategoria),
-
-    CONSTRAINT CK_Producto_Precio
-        CHECK (Precio > 0),
-
-    CONSTRAINT CK_Producto_Stock
-        CHECK (Stock >= 0)
-);
