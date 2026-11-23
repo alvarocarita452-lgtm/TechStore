@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de clientes | TechStore</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-900">
+
+    <header class="bg-slate-950 text-white px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-extrabold">
+            Tech<span class="text-cyan-400">Store</span>
+        </h1>
+
+        <a href="./dashboard.html"
+           class="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-lg font-semibold">
+            Volver al panel
+        </a>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6 md:p-10">
+
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold">Gestión de clientes</h2>
+            <p class="text-slate-500 mt-2">
+                Administra la información de los clientes de TechStore.
+            </p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <section class="bg-white rounded-xl shadow p-6 mb-8">
+
+            <h3 id="tituloFormulario" class="text-xl font-bold mb-5">
+                Registrar cliente
+            </h3>
+
+            <form id="formCliente" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                <input type="hidden" id="idCliente">
+
+                <div>
+                    <label for="nombres" class="block font-semibold mb-2">
+                        Nombres
+                    </label>
+                    <input type="text" id="nombres" maxlength="100" required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3"
+                        placeholder="Nombres del cliente">
+                </div>
+
+                <div>
+                    <label for="apellidos" class="block font-semibold mb-2">
+                        Apellidos
+                    </label>
+                    <input type="text" id="apellidos" maxlength="100" required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3"
+                        placeholder="Apellidos del cliente">
+                </div>
+
+                <div>
+                    <label for="correo" class="block font-semibold mb-2">
+                        Correo electrónico
+                    </label>
+                    <input type="email" id="correo" maxlength="100" required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3"
+                        placeholder="cliente@correo.com">
+                </div>
+
+                <div>
+                    <label for="telefono" class="block font-semibold mb-2">
+                        Teléfono
+                    </label>
+                    <input type="tel" id="telefono" maxlength="20" required
+                        class="w-full border border-slate-300 rounded-lg px-4 py-3"
+                        placeholder="987654321">
+                </div>
+
+                <div class="md:col-span-2 flex flex-wrap gap-3">
+
+                    <button type="submit" id="btnRegistrar"
+                        class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold">
+                        Registrar cliente
+                    </button>
+
+                    <button type="button" id="btnCancelar"
+                        class="hidden bg-slate-500 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold">
+                        Cancelar edición
+                    </button>
+
+                </div>
+
+            </form>
+        </section>
+
+        <!-- TABLA -->
+        <section class="bg-white rounded-xl shadow p-6">
+
+            <div class="flex justify-between items-center mb-5">
+                <h3 class="text-xl font-bold">Listado de clientes</h3>
+
+                <button id="btnActualizar"
+                    class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg">
+                    Actualizar
+                </button>
+            </div>
+
+            <p id="mensajeClientes" class="text-sm mb-4 text-slate-500"></p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-600">
+                            <th class="p-4">ID</th>
+                            <th class="p-4">Nombres</th>
+                            <th class="p-4">Apellidos</th>
+                            <th class="p-4">Correo</th>
+                            <th class="p-4">Teléfono</th>
+                            <th class="p-4">Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaClientes">
+                        <tr>
+                            <td colspan="6" class="p-4 text-center">
+                                Cargando clientes...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./js/clientes.js"></script>
+
+</body>
+</html>

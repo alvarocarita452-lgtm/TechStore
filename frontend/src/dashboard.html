@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel administrativo | TechStore</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-900">
+
+    <!-- BARRA SUPERIOR -->
+    <header class="bg-slate-950 text-white px-6 py-4 flex justify-between items-center">
+
+        <h1 class="text-2xl font-extrabold">
+            Tech<span class="text-cyan-400">Store</span>
+        </h1>
+
+        <div class="flex items-center gap-4">
+
+            <div class="text-right">
+                <p id="nombreUsuario" class="font-semibold">Usuario</p>
+                <p id="rolUsuario" class="text-sm text-cyan-400">Rol</p>
+            </div>
+
+            <button
+                id="btnCerrarSesion"
+                class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-semibold">
+                Cerrar sesión
+            </button>
+
+        </div>
+    </header>
+
+    <div class="flex min-h-screen">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="w-64 bg-white shadow-md p-5 hidden md:block">
+
+            <h2 class="text-xs font-bold text-slate-400 uppercase mb-5">
+                Menú principal
+            </h2>
+
+            <nav class="space-y-2">
+
+                <a href="dashboard.html"
+                   class="block bg-cyan-500 text-white px-4 py-3 rounded-lg font-semibold">
+                    Inicio
+                </a>
+
+                <a href="productos.html"
+                   id="menuProductos"
+                   class="block hover:bg-slate-100 px-4 py-3 rounded-lg">
+                    Productos
+                </a>
+
+                <a href="categorias.html"
+                   id="menuCategorias"
+                   class="block hover:bg-slate-100 px-4 py-3 rounded-lg">
+                    Categorías
+                </a>
+
+                <a href="clientes.html"
+                   id="menuClientes"
+                   class="block hover:bg-slate-100 px-4 py-3 rounded-lg">
+                    Clientes
+                </a>
+
+                <a href="usuarios.html"
+                   id="menuUsuarios"
+                   class="block hover:bg-slate-100 px-4 py-3 rounded-lg">
+                    Usuarios
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="flex-1 p-6 md:p-10">
+
+            <div class="mb-8">
+
+                <h2 class="text-3xl font-bold">
+                    Panel de control
+                </h2>
+
+                <p class="text-slate-500 mt-2">
+                    Bienvenido al sistema de gestión de TechStore.
+                </p>
+
+            </div>
+
+            <!-- TARJETAS -->
+            <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                <!-- PRODUCTOS -->
+                <a href="productos.html"
+                   class="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition">
+
+                    <p class="text-slate-500">Productos</p>
+
+                    <h3 class="text-3xl font-bold text-cyan-500 mt-3">
+                        Inventario
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-2">
+                        Gestión de productos
+                    </p>
+
+                </a>
+
+                <!-- CATEGORÍAS -->
+                <a href="categorias.html"
+                   class="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition">
+
+                    <p class="text-slate-500">Categorías</p>
+
+                    <h3 class="text-3xl font-bold text-cyan-500 mt-3">
+                        Catálogo
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-2">
+                        Organización de productos
+                    </p>
+
+                </a>
+
+                <!-- CLIENTES -->
+                <a href="clientes.html"
+                   class="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition">
+
+                    <p class="text-slate-500">Clientes</p>
+
+                    <h3 class="text-3xl font-bold text-cyan-500 mt-3">
+                        Registro
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-2">
+                        Gestión de clientes
+                    </p>
+
+                </a>
+
+                <!-- USUARIOS -->
+                <a href="usuarios.html"
+                   id="tarjetaUsuarios"
+                   class="block bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition">
+
+                    <p class="text-slate-500">Usuarios</p>
+
+                    <h3 class="text-3xl font-bold text-cyan-500 mt-3">
+                        Personal
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-2">
+                        Administración de usuarios
+                    </p>
+
+                </a>
+
+            </section>
+
+            <!-- INFORMACIÓN -->
+            <section class="bg-white rounded-xl shadow mt-8 p-6">
+
+                <h3 class="text-xl font-bold mb-3">
+                    Información del sistema
+                </h3>
+
+                <p class="text-slate-600">
+                    Desde este panel podrás acceder a las diferentes
+                    funcionalidades de gestión de TechStore.
+                </p>
+
+                <div class="mt-5 border-t pt-4">
+
+                    <p class="text-sm text-slate-500">
+                        Sistema de gestión comercial - TechStore © 2026
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+
+</body>
+</html>
